@@ -1,0 +1,4 @@
+According to Allen Holub's article, accessor methods (getters and setters) should be used sparingly. 
+They can lead to tight coupling (changes affect many classes) and brittle code (less flexible to class-related changes, more difficult to edit). 
+Instead, use parameterized constructors (parameters for initializing) and factory methods (static) to control object creation and initialization for better efficiency. 
+Accessors should only be used when you need to expose internal state without exposing implementation details.
