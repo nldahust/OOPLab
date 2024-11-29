@@ -1,5 +1,6 @@
 package hust.soict.dsai.test.store;
-import hust.soict.dsai.aims.disc.DigitalVideoDisc;
+import hust.soict.dsai.aims.media.DigitalVideoDisc;
+
 import hust.soict.dsai.aims.store.Store;
 
 public class StoreTest {
@@ -12,18 +13,17 @@ public class StoreTest {
         DigitalVideoDisc dvd3 = new DigitalVideoDisc("The Lion King", "Animation", "Director C", 85, 24.99f);
         
         // Test adding DVDs to the store
-        store.addDVD(dvd1);
-        store.addDVD(dvd2);
-        store.addDVD(dvd3);
+        store.addMedia(dvd1);
+        store.addMedia(dvd2);
+        store.addMedia(dvd3);
         
         // Display items in store
-        store.displayItems();
+        store.print();
         
         // Test removing a DVD
-        store.removeDVD(dvd2.getId()); // Remove Cinderella
-        store.displayItems(); // Display remaining DVDs
+        store.removeMedia(dvd2); // Remove Cinderella
+        store.print(); // Display remaining DVDs
         
-        // Try to remove a DVD that doesn't exist
-        store.removeDVD(999); // Nonexistent ID
+
     }
 }
