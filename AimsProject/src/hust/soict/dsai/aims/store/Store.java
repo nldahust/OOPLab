@@ -1,14 +1,16 @@
 package hust.soict.dsai.aims.store;
-
-import hust.soict.dsai.aims.media.Media;
-
 import java.util.ArrayList;
 
-
+import hust.soict.dsai.aims.media.Media;
 
 public class Store {
 
     private ArrayList<Media> itemsInStore = new ArrayList<Media>();
+
+    public ArrayList<Media> getItemsInStore() {
+		return itemsInStore;
+	}
+
 
     // Add and remove media from the store
     public void addMedia(Media media) {
